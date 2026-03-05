@@ -35,7 +35,6 @@ function writeMessage(msg) {
   const span = document.createElement('span');
   span.classList.add('box');
   span.textContent = msg;
-
   msgEl.append(div, span);
 }
 
@@ -80,6 +79,7 @@ function checkNumber(msg) {
     const div = document.createElement('div');
     div.textContent = 'Number must be between 1 and 100';
     msgEl.append(div);
+
     return;
   }
 
@@ -95,7 +95,6 @@ function checkNumber(msg) {
     // Add listener and handler to button
     button.addEventListener('click', () => window.location.reload());
 
-    msgEl.innerHTML = ''
     msgEl.append(h2, button);
   } else if (num > randomNum) {
     const div = document.createElement('div');
@@ -105,8 +104,6 @@ function checkNumber(msg) {
     // if (num < randomNum)
     const div = document.createElement('div');
     div.textContent = 'GO HIGHER';
-
-    msgEl.innerHTML = ''
     msgEl.append(div);
   }
 }
